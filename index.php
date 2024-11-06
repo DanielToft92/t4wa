@@ -18,6 +18,9 @@ require "settings/init.php";
 </head>
 
 <body>
+
+
+<!-- Produkt Cards -->
 <div class="row g-2">
 	<?php
 	$produkter = $db->sql("SELECT * FROM produkter");
