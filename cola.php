@@ -21,23 +21,29 @@ require "settings/init.php";
         <div class="row g-2">
             <?php
             $cola = $db->sql("SELECT * FROM cola");
-            foreach($cola as $colaen) {
+            foreach ($cola as $colaen) {
                 ?>
                 <div class="col-6 col-md-3">
                     <div class="card h-100">
+
                         <div class="card-header">
                             <?php
                             echo $colaen->coNavn;
                             ?>
                         </div>
                         <div class="card-body">
-                            <?php
-                            echo '<img src="pics/cola' . $colaen->coId . '.webp" class="card-img-top" alt="' . $colaen->coNavn . '">';
+                            <a href=
+                               <?php
+                               echo '"cola' . $colaen->coId . '.php"' . '>';
                             ?>
+                                <?php
+                                echo '<img src="pics/cola' . $colaen->coId . '.webp" class="card-img-top" alt="' . $colaen->coNavn . '">';
+                                ?>
+                               </a>
                         </div>
                         <div class="card-footer text-muted">
                             <?php
-                             echo $colaen->coPris;
+                            echo $colaen->coPris;
                             ?>
                         </div>
                     </div>
