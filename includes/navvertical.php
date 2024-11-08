@@ -5,7 +5,7 @@
     </a>
     <a href="#" class="category link-light" onclick="addActive(this)">Champagne
     </a>
-    <a href="#" class="category link-light" onclick="addActive(this)">Cola
+    <a href="cola.php" class="category link-light" onclick="addActive(this)">Cola
     </a>
     <a href="#" class="category link-light" onclick="addActive(this)">Lemon/Lime
     </a>
