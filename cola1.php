@@ -1,5 +1,8 @@
 <?php
 require "settings/init.php";
+$cola = $db->sql("SELECT coId, coNavn, coBeskrivelse, coPris FROM cola
+where coId = 1");
+
 ?>
 <!DOCTYPE html>
 <html lang="da">
@@ -32,7 +35,9 @@ require "settings/init.php";
     <div class="produkttekst">
         <div class="ingredienser">
 
-            <h2>Moscow Mule</h2>
+            <h2>
+                <?php echo $cola[1['coNavn']; ?>
+            </h2>
             <li>2 ting</li>
             <li>3 ting</li>
             <li>4 ting</li>
