@@ -28,17 +28,17 @@ require "settings/init.php";
     $gin = $db->sql("SELECT * FROM gin");
     foreach($gin as $ginen) {
         ?>
-        <div class="col-12 col-md-6">
-            <div class="card w-100">
+        <div class="col-6 col-md-3">
+            <div class="card h-100">
                 <div class="card-header">
                     <?php
                     echo $ginen->ginNavn;
                     ?>
                 </div>
-                <div class="card-body" style="width: 30%;">
-                    <?php
-                    echo '<img src="pics/gin/gin' . $ginen->ginId . '.png" class="card-img-top" alt="' . $ginen->ginNavn . '">';
-                    ?>
+                <div class="card-body">
+                    <a href="ginsider/gin<?php echo $ginen->ginId; ?>.php">
+                        <img src="pics/gin/gin<?php echo $ginen->ginId; ?>.png" class="card-img-top" alt="<?php echo $ginen->ginNavn; ?>">
+                    </a>
                 </div>
                 <div class="card-footer text-muted">
                     <?php
