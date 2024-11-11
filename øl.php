@@ -37,7 +37,7 @@ require "settings/init.php";
                                echo '"rom' . $rom->romId . '.php"' . '>';
                                ?>
                                <?php
-                               echo '<img src="pics/rom' . $rom->romId . '.jpg" class="card-img-top" alt="' . $rom->romNavn . '">';
+                               echo '<img src="pics/rom' . $rom->romId . '.webp" class="card-img-top" alt="' . $rom->romNavn . '">';
                                ?>
                                </a>
                         </div>
