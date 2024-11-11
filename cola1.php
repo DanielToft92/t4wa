@@ -28,18 +28,18 @@ require "settings/init.php";
 
 
     <div class="produktbillede">
-        <img src="pics/moscowmule.jpg" class="w-100" style="border-radius: 10px" alt="">
-    </div>
+        <?php
+        $cola = $db->sql("SELECT * FROM cola WHERE coId = 1");
+        foreach ($cola as $colaen) {
+            echo '<img src="pics/cola' . $colaen->coId . '.webp" class="w-100" alt="' . $colaen->coNavn . '">';
+        }
+        ?>    </div>
     <div class="produkttekst">
         <div class="ingredienser">
-
             <h2>
                 <?php
-                $cola = $db->sql("SELECT * FROM cola WHERE coId = 1");
-                foreach ($cola as $col) {
-                echo $col->coNavn;
-                }
-                 ?>
+                    echo $colaen->coNavn;
+                ?>
             </h2>
             <li>2 ting</li>
             <li>3 ting</li>
@@ -51,7 +51,7 @@ require "settings/init.php";
 
         <div class="tekst">
             <?php
-            echo $col->coBeskrivelse;
+            echo $colaen->coBeskrivelse;
             ?>
         </div>
         <div class="knapper"></div>
@@ -60,7 +60,6 @@ require "settings/init.php";
 </div>
 
 <script src="app.js"></script>
-
 
 
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
