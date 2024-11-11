@@ -7,7 +7,7 @@
     </a>
     <a href="rom.php" class="category link-light" onclick="addActive(this)">Rom
     </a>
-    <a href="#" class="category link-light" onclick="addActive(this)">Gin
+    <a href="gin.php" class="category link-light" onclick="addActive(this)">Gin
     </a>
     <a href="#" class="category link-light" onclick="addActive(this)">Vodka
     </a>

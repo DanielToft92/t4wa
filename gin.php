@@ -18,26 +18,31 @@ require "settings/init.php";
 </head>
 
 <body>
+<?php include("includes/navtop.php") ?>
+<div class="indhold">
+    <?php include("includes/navvertical.php") ?>
+    <div class="indholdindhold">
+
 <div class="row g-2">
     <?php
     $gin = $db->sql("SELECT * FROM gin");
-    foreach($gin as $produkt) {
+    foreach($gin as $ginen) {
         ?>
         <div class="col-12 col-md-6">
             <div class="card w-100">
                 <div class="card-header">
                     <?php
-                    echo $produkt->ginNavn;
+                    echo $ginen->ginNavn;
                     ?>
                 </div>
-                <div class="card-body">
+                <div class="card-body" style="width: 30%;">
                     <?php
-                    echo '<img src="pics/gin/gin' . $gin->ginId . '.png" class="card-img-top" alt="' . $gin->ginNavn . '">';
+                    echo '<img src="pics/gin/gin' . $ginen->ginId . '.png" class="card-img-top" alt="' . $ginen->ginNavn . '">';
                     ?>
                 </div>
                 <div class="card-footer text-muted">
                     <?php
-                    // Indsæt andet felt fra database
+                    echo $ginen->ginPris;
                     ?>
                 </div>
             </div>
