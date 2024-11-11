@@ -20,17 +20,16 @@ require "settings/init.php";
     <?php include("includes/navvertical.php") ?>
     <div class="indholdindhold">
 
-        <!-- Search form with oninput event for real-time search -->
+
         <input type="text" id="search" placeholder="Søg efter navn" oninput="liveSearch()"
                style="margin: 20px 0; padding: 8px; width: 100%; max-width: 200px;
-               border-radius: 5px; border: 1px solid #ccc;" />
+               border-radius: 5px; border: 1px solid #ccc;"/>
 
 
         <div class="row g-2" id="results">
-            <!-- Initial load: Display all gin items -->
             <?php
             $gin = $db->sql("SELECT * FROM gin");
-            foreach($gin as $ginen) {
+            foreach ($gin as $ginen) {
                 ?>
                 <div class="col-6 col-md-3 gin-item">
                     <div class="card h-100">
@@ -39,7 +38,8 @@ require "settings/init.php";
                         </div>
                         <div class="card-body">
                             <a href="gin<?php echo htmlspecialchars($ginen->ginId); ?>.php">
-                                <img src="pics/gin/gin<?php echo htmlspecialchars($ginen->ginId); ?>.png" class="card-img-top" alt="<?php echo htmlspecialchars($ginen->ginNavn); ?>">
+                                <img src="pics/gin/gin<?php echo htmlspecialchars($ginen->ginId); ?>.png"
+                                     class="card-img-top" alt="<?php echo htmlspecialchars($ginen->ginNavn); ?>">
                             </a>
                         </div>
                         <div class="card-footer text-muted">
@@ -53,14 +53,14 @@ require "settings/init.php";
         </div>
 
         <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
         <script>
-            // AJAX function to filter results live as user types
             function liveSearch() {
                 const searchTerm = document.getElementById('search').value;
 
                 const xhr = new XMLHttpRequest();
                 xhr.open("GET", "search.php?search=" + encodeURIComponent(searchTerm) + "&table=gin", true);
-                xhr.onreadystatechange = function() {
+                xhr.onreadystatechange = function () {
                     if (xhr.readyState === 4 && xhr.status === 200) {
                         document.getElementById('results').innerHTML = xhr.responseText;
                     }

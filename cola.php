@@ -19,14 +19,13 @@ require "settings/init.php";
     <?php include("includes/navvertical.php") ?>
     <div class="indholdindhold">
 
-        <!-- Search form with oninput event for real-time search -->
+
         <input type="text" id="search" placeholder="Søg efter navn" oninput="liveSearch()"
                style="margin: 20px 0; padding: 8px; width: 100%; max-width: 200px;
                border-radius: 5px; border: 1px solid #ccc;" />
 
 
         <div class="row g-2" id="results">
-            <!-- Initial load: Display all cola items -->
             <?php
             $cola = $db->sql("SELECT * FROM cola");
             foreach ($cola as $colaen) {
