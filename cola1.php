@@ -1,7 +1,5 @@
 <?php
 require "settings/init.php";
-$cola = $db->sql("SELECT coId, coNavn, coBeskrivelse, coPris FROM cola
-where coId = 1");
 
 ?>
 <!DOCTYPE html>
@@ -36,7 +34,12 @@ where coId = 1");
         <div class="ingredienser">
 
             <h2>
-                <?php echo $cola[1['coNavn']; ?>
+                <?php
+                $cola = $db->sql("SELECT * FROM cola WHERE coId = 1");
+                foreach ($cola as $col) {
+                echo $col->coNavn;
+                }
+                 ?>
             </h2>
             <li>2 ting</li>
             <li>3 ting</li>
@@ -47,9 +50,9 @@ where coId = 1");
         </div>
 
         <div class="tekst">
-            Kom isterninger, limesaft og vodka i en shaker og ryst det godt sammen.
-
-            Hæld i to glas fyldt med knuste isterninger, top med gingerbeer og pynt med lime og mynte
+            <?php
+            echo $col->coBeskrivelse;
+            ?>
         </div>
         <div class="knapper"></div>
     </div>
