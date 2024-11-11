@@ -36,7 +36,7 @@ require "settings/init.php";
                     ?>
                 </div>
                 <div class="card-body">
-                    <a href="ginsider/gin<?php echo $ginen->ginId; ?>.php">
+                    <a href="gin<?php echo $ginen->ginId; ?>.php">
                         <img src="pics/gin/gin<?php echo $ginen->ginId; ?>.png" class="card-img-top" alt="<?php echo $ginen->ginNavn; ?>">
                     </a>
                 </div>
@@ -52,6 +52,7 @@ require "settings/init.php";
     ?>
 </div>
 
-<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="app.js"></script>
 </body>
 </html>

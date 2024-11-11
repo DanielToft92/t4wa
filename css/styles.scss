@@ -19,6 +19,8 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 @import "bootstrapComponents";
 
 // 5. Du kan lave styling her...
+
+
 li{
 	list-style: none;
 }
@@ -110,3 +112,4 @@ li{
 	flex-direction: row;
 	align-items: end;
 }
+
