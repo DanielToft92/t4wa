@@ -30,6 +30,18 @@ if ($table == 'gin') {
     $imageFolder = 'ct';
     $imageExtension = '.jpg';
     $imagePathPrefix = 'pics/ct/';
+} else if ($table == 'mocktails') {
+    $sql = "SELECT * FROM mocktails";
+    $searchColumn = 'mtNavn';
+    $imageFolder = 'mt';
+    $imageExtension = '.jpg';
+    $imagePathPrefix = 'pics/mt/';
+} else if ($table == 'øl') {
+    $sql = "SELECT * FROM øl";
+    $searchColumn = 'ølNavn';
+    $imageFolder = 'øl';
+    $imageExtension = '.jpg';
+    $imagePathPrefix = 'pics/øl/';
 } else {
     echo "<p>Invalid table specified.</p>";
     exit;
@@ -55,6 +67,10 @@ foreach ($items as $item) {
         $imagePath = $imagePathPrefix . 'rom' . $item->romId . $imageExtension;
     } else if ($table == 'cocktails') {
         $imagePath = $imagePathPrefix . 'cocktails' . $item->ctId . $imageExtension;
+    } else if ($table == 'mocktails') {
+        $imagePath = $imagePathPrefix . 'cocktails' . $item->mtId . $imageExtension;
+    } else if ($table == 'øl') {
+        $imagePath = $imagePathPrefix . 'cocktails' . $item->ølId . $imageExtension;
     }
 
     ?>
