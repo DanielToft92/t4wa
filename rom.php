@@ -32,14 +32,10 @@ require "settings/init.php";
                             ?>
                         </div>
                         <div class="card-body">
-                            <a href=
-                               <?php
-                               echo '"rom' . $rom->romId . '.php"' . '>';
-                               ?>
-                               <?php
-                               echo '<img src="pics/rom' . $rom->romId . '.jpg" class="card-img-top" alt="' . $rom->romNavn . '">';
-                               ?>
-                               </a>
+                            <a href="rom<?php echo $rom->romId?>.php" class="card-link">
+                                <img src="pics/rom<?php echo $rom->romId ?>.jpg" class="card-img-top"
+                                     alt="<?php echo $rom->romNavn ?>">
+                            </a>
                         </div>
                         <div class="card-footer text-muted">
                             <?php

@@ -32,14 +32,10 @@ require "settings/init.php";
                             ?>
                         </div>
                         <div class="card-body">
-                            <a href=
-                               <?php
-                               echo '"cola' . $colaen->coId . '.php"' . '>';
-                            ?>
-                                <?php
-                                echo '<img src="pics/cola' . $colaen->coId . '.webp" class="card-img-top" alt="' . $colaen->coNavn . '">';
-                                ?>
-                               </a>
+                            <a href="cola<?php echo $colaen->coId?>.php" class="card-link">
+                                <img src="pics/cola<?php echo $colaen->coId ?>.webp" class="card-img-top"
+                                     alt="<?php echo $colaen->coNavn ?>">
+                            </a>
                         </div>
                         <div class="card-footer text-muted">
                             <?php
