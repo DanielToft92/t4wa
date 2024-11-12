@@ -17,7 +17,6 @@ require "settings/init.php";
 <div class="indhold">
     <?php include("includes/navvertical.php") ?>
     <div class="indholdindhold">
-
         <div class="row g-2">
             <?php
             $romme = $db->sql("SELECT * FROM romme");
