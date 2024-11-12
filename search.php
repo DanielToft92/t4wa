@@ -68,9 +68,9 @@ foreach ($items as $item) {
     } else if ($table == 'cocktails') {
         $imagePath = $imagePathPrefix . 'cocktails' . $item->ctId . $imageExtension;
     } else if ($table == 'mocktails') {
-        $imagePath = $imagePathPrefix . 'cocktails' . $item->mtId . $imageExtension;
+        $imagePath = $imagePathPrefix . 'mocktails' . $item->mtId . $imageExtension;
     } else if ($table == 'øl') {
-        $imagePath = $imagePathPrefix . 'cocktails' . $item->ølId . $imageExtension;
+        $imagePath = $imagePathPrefix . 'øl' . $item->ølId . $imageExtension;
     }
 
     ?>

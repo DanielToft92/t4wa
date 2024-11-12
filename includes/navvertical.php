@@ -1,7 +1,7 @@
 <div class="navvertical">
     <a href="#" class="category link-light" onclick="addActive(this)">Vin
     </a>
-    <a href="#" class="category link-light" onclick="addActive(this)">Øl
+    <a href="øl.php" class="category link-light" onclick="addActive(this)">Øl
     </a>
     <a href="#" class="category link-light" onclick="addActive(this)">Champagne
     </a>
