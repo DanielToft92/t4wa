@@ -18,6 +18,18 @@ if ($table == 'gin') {
     $imageFolder = '';
     $imageExtension = '.webp';
     $imagePathPrefix = 'pics/';
+} else if ($table == 'rom') {
+    $sql = "SELECT * FROM rom";
+    $searchColumn = 'romNavn';
+    $imageFolder = 'rom';
+    $imageExtension = '.jpg';
+    $imagePathPrefix = 'pics/rom/';
+} else if ($table == 'cocktails') {
+    $sql = "SELECT * FROM cocktails";
+    $searchColumn = 'ctNavn';
+    $imageFolder = 'ct';
+    $imageExtension = '.jpg';
+    $imagePathPrefix = 'pics/ct/';
 } else {
     echo "<p>Invalid table specified.</p>";
     exit;
@@ -30,7 +42,7 @@ if (!empty($searchTerm)) {
     $params[":searchTerm"] = "%" . $searchTerm . "%";
 }
 
-// Execute the query
+
 $items = $db->sql($sql, $params);
 
 
@@ -39,7 +51,12 @@ foreach ($items as $item) {
         $imagePath = $imagePathPrefix . 'gin' . $item->ginId . $imageExtension;
     } else if ($table == 'cola') {
         $imagePath = $imagePathPrefix . 'cola' . $item->coId . $imageExtension;
+    } else if ($table == 'rom') {
+        $imagePath = $imagePathPrefix . 'rom' . $item->romId . $imageExtension;
+    } else if ($table == 'cocktails') {
+        $imagePath = $imagePathPrefix . 'cocktails' . $item->ctId . $imageExtension;
     }
+
     ?>
     <div class="col-6 col-md-3">
         <div class="card h-100">
