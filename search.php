@@ -92,7 +92,6 @@ foreach ($items as $item) {
     <?php
 }
 
-// If no results found, show a message
 if (empty($items)) {
     echo "<p>Ingen resultater fundet.</p>";
 }
