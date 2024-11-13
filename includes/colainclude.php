@@ -43,7 +43,11 @@
         </div>
         <div class="knapper"></div>
     </div>
-    <div class="filtrering"></div>
+    <div class="filtrering">
+        <div class="d-flex justify-content-center">
+            <img src="pics/frame.png" class="w-50" alt="QR Code">
+        </div>
+    </div>
 </div>
 
 <script src="app.js"></script>
