@@ -23,7 +23,7 @@ require "settings/init.php";
 
     <div class="produktbillede" style="margin-top: 50px;">
         <?php
-        $gin = $db->sql("SELECT * FROM gin WHERE ginId = 6");
+        $gin = $db->sql("SELECT * FROM gin WHERE ginId = 8");
         foreach ($gin as $ginen) {
             echo '<img src="pics/gin/gin' . $ginen->ginId . '.jpg" class="w-80" alt="' . $ginen->ginNavn . '">';
         }

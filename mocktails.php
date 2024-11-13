@@ -6,7 +6,7 @@ require "settings/init.php";
 <html lang="da">
 <head>
     <meta charset="utf-8">
-    <title>Gin</title>
+    <title>Mocktails</title>
     <meta name="robots" content="All">
     <meta name="author" content="Udgiver">
     <meta name="copyright" content="Information om copyright">
@@ -28,22 +28,22 @@ require "settings/init.php";
 
         <div class="row g-2" id="results">
             <?php
-            $gin = $db->sql("SELECT * FROM gin");
-            foreach ($gin as $ginen) {
+            $mt = $db->sql("SELECT * FROM mocktails");
+            foreach ($mt as $mocktailsne) {
                 ?>
                 <div class="col-6 col-md-3 gin-item">
                     <div class="card h-100">
                         <div class="card-header">
-                            <?php echo htmlspecialchars($ginen->ginNavn); ?>
+                            <?php echo htmlspecialchars($mocktailsne->mtNavn); ?>
                         </div>
                         <div class="card-body">
-                            <a href="gin<?php echo htmlspecialchars($ginen->ginId); ?>.php">
-                                <img src="pics/gin/gin<?php echo htmlspecialchars($ginen->ginId); ?>.jpg"
-                                     class="card-img-top" alt="<?php echo htmlspecialchars($ginen->ginNavn); ?>">
+                            <a href="mocktails<?php echo htmlspecialchars($mocktailsne->mtId); ?>.php">
+                                <img src="pics/mocktails/mt<?php echo htmlspecialchars($mocktailsne->mtId); ?>.jpg"
+                                     class="card-img-top" alt="<?php echo htmlspecialchars($mocktailsne->mtNavn); ?>">
                             </a>
                         </div>
                         <div class="card-footer text-muted">
-                            <?php echo htmlspecialchars($ginen->ginPris); ?>
+                            <?php echo htmlspecialchars($mocktailsne->mtKategori); ?>
                         </div>
                     </div>
                 </div>
@@ -59,7 +59,7 @@ require "settings/init.php";
                 const searchTerm = document.getElementById('search').value;
 
                 const xhr = new XMLHttpRequest();
-                xhr.open("GET", "search.php?search=" + encodeURIComponent(searchTerm) + "&table=gin", true);
+                xhr.open("GET", "search.php?search=" + encodeURIComponent(searchTerm) + "&table=mocktails", true);
                 xhr.onreadystatechange = function () {
                     if (xhr.readyState === 4 && xhr.status === 200) {
                         document.getElementById('results').innerHTML = xhr.responseText;

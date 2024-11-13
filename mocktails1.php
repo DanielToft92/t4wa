@@ -29,32 +29,41 @@ require "settings/init.php";
 
     <div class="produktbillede" style="margin-top: 50px;">
         <?php
-        $gin = $db->sql("SELECT * FROM gin WHERE ginId = 1");
-        foreach ($gin as $ginen) {
-            echo '<img src="pics/gin/gin' . $ginen->ginId . '.jpg" class="w-80" alt="' . $ginen->ginNavn . '">';
+        $mt = $db->sql("SELECT * FROM mocktails WHERE mtId = 1");
+        foreach ($mt as $mocktailsne) {
+            echo '<img src="pics/mocktails/mt' . $mocktailsne->mtId . '.jpg" class="w-80" alt="' . $mocktailsne->mtNavn . '">';
         }
-        ?>    </div>
+        ?>
+    </div>
     <div class="produkttekst">
         <div class="ingredienser">
             <h2 style="margin-top: 50px">
                 <?php
-                echo $ginen->ginNavn;
+                echo $mocktailsne->mtNavn;
                 ?>
             </h2>
             <br>
+            <li>- 3 cl Shake-It Mixer: Coffee</li>
+            <li>- 12 cl Tonic</li>
+            <li>- Isterninger</li>
         </div>
-
         <div class="tekst" style="margin-top: 10px">
             <?php
-            echo $ginen->ginBeskrivelse;
+            echo $mocktailsne->mtBeskrivelse;
             ?>
         </div>
-        <div class="knapper"></div>
-    </div>
-    <div class="filtrering"></div>
-</div>
 
-<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            function goBack() {
+                if (window.history.length > 1) {
+                    window.history.back();
+                } else {
+                    window.location.href = 'index.php';
+                }
+            }
+        </script>
+
+        <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script src="app.js"></script>
 </body>
 

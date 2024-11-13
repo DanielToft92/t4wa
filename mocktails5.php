@@ -29,30 +29,29 @@ require "settings/init.php";
 
     <div class="produktbillede" style="margin-top: 50px;">
         <?php
-        $gin = $db->sql("SELECT * FROM gin WHERE ginId = 1");
-        foreach ($gin as $ginen) {
-            echo '<img src="pics/gin/gin' . $ginen->ginId . '.jpg" class="w-80" alt="' . $ginen->ginNavn . '">';
+        $mt = $db->sql("SELECT * FROM mocktails WHERE mtId = 5");
+        foreach ($mt as $mocktailsne) {
+            echo '<img src="pics/mocktails/mt' . $mocktailsne->mtId . '.jpg" class="w-80" alt="' . $mocktailsne->mtNavn . '">';
         }
         ?>    </div>
     <div class="produkttekst">
         <div class="ingredienser">
             <h2 style="margin-top: 50px">
                 <?php
-                echo $ginen->ginNavn;
+                echo $mocktailsne->mtNavn;
                 ?>
             </h2>
             <br>
+            <li>- 2 cl Shake-It Mixer Grenadine</li>
+            <li>- 2 cl Friskpresset limesaft</li>
+            <li>- 8 cl Ginger Ale</li>
+            <li>- Isterninger</li>
         </div>
-
         <div class="tekst" style="margin-top: 10px">
             <?php
-            echo $ginen->ginBeskrivelse;
+            echo $mocktailsne->mtBeskrivelse;
             ?>
         </div>
-        <div class="knapper"></div>
-    </div>
-    <div class="filtrering"></div>
-</div>
 
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script src="app.js"></script>

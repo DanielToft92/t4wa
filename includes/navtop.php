@@ -3,7 +3,7 @@
     </a>
     <a href="#" class="category link-light" onclick="addActive(this)">Cocktails
     </a>
-    <a href="#" class="category link-light" onclick="addActive(this)">Mocktails
+    <a href="mocktails.php" class="category link-light" onclick="addActive(this)">Mocktails
     </a>
     <a href="rom.php" class="category link-light" onclick="addActive(this)">Rom
     </a>

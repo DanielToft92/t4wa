@@ -21,31 +21,23 @@ require "settings/init.php";
     <?php include("includes/navvertical.php") ?>
 
 
-    <div class="produktbillede">
+    <div class="produktbillede" style="margin-top: 50px;">
         <?php
         $gin = $db->sql("SELECT * FROM gin WHERE ginId = 5");
         foreach ($gin as $ginen) {
-            echo '<img src="pics/gin/gin' . $ginen->ginId . '.png" class="w-80" alt="' . $ginen->ginNavn . '">';
+            echo '<img src="pics/gin/gin' . $ginen->ginId . '.jpg" class="w-80" alt="' . $ginen->ginNavn . '">';
         }
         ?>    </div>
     <div class="produkttekst">
         <div class="ingredienser">
-            <h2 style="margin-top: 20px">
+            <h2 style="margin-top: 50px">
                 <?php
                 echo $ginen->ginNavn;
                 ?>
             </h2>
             <br>
-            <br>
-            <br>
-            <li>- Lækker</li>
-            <li>- Lækker</li>
-            <li>- Lækker</li>
-            <li>- Lækker</li>
-            <li>- Lækker</li>
         </div>
-
-        <div class="tekst" style="margin-top: 100px">
+        <div class="tekst" style="margin-top: 10px">
             <?php
             echo $ginen->ginBeskrivelse;
             ?>

@@ -1,5 +1,5 @@
 <?php
-require "settings/init.php";
+require_once "settings/init.php";
 
 
 $searchTerm = isset($_GET['search']) ? $_GET['search'] : '';
@@ -10,7 +10,7 @@ if ($table == 'gin') {
     $sql = "SELECT * FROM gin";
     $searchColumn = 'ginNavn';
     $imageFolder = 'gin';
-    $imageExtension = '.png';
+    $imageExtension = '.jpg';
     $imagePathPrefix = 'pics/gin/';
 } else if ($table == 'cola') {
     $sql = "SELECT * FROM cola";
@@ -33,9 +33,9 @@ if ($table == 'gin') {
 } else if ($table == 'mocktails') {
     $sql = "SELECT * FROM mocktails";
     $searchColumn = 'mtNavn';
-    $imageFolder = 'mt';
+    $imageFolder = 'mocktails';
     $imageExtension = '.jpg';
-    $imagePathPrefix = 'pics/mt/';
+    $imagePathPrefix = 'pics/mocktails/';
 } else if ($table == 'øl') {
     $sql = "SELECT * FROM øl";
     $searchColumn = 'ølNavn';
@@ -68,7 +68,7 @@ foreach ($items as $item) {
     } else if ($table == 'cocktails') {
         $imagePath = $imagePathPrefix . 'cocktails' . $item->ctId . $imageExtension;
     } else if ($table == 'mocktails') {
-        $imagePath = $imagePathPrefix . 'mocktails' . $item->mtId . $imageExtension;
+        $imagePath = $imagePathPrefix . 'mt' . $item->mtId . $imageExtension;
     } else if ($table == 'øl') {
         $imagePath = $imagePathPrefix . 'øl' . $item->ølId . $imageExtension;
     }
@@ -85,8 +85,15 @@ foreach ($items as $item) {
                 </a>
             </div>
             <div class="card-footer text-muted">
-                <?php echo htmlspecialchars($item->{$table . 'Pris'}); ?>
+                <?php
+                if ($table == 'mocktails') {
+                    echo htmlspecialchars($item->mtKategori);
+                } else {
+                    echo htmlspecialchars($item->{$table . 'Pris'});
+                }
+                ?>
             </div>
+
         </div>
     </div>
     <?php
@@ -96,3 +103,4 @@ if (empty($items)) {
     echo "<p>Ingen resultater fundet.</p>";
 }
 ?>
+
