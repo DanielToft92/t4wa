@@ -32,7 +32,7 @@ require "settings/init.php";
             <div class="col">
                 <div class="card h-100">
                     <a href="produkt.php">
-                        <img src="pics/moscowmule.jpg" class="card-img-top" alt="...">
+                        <img src="pics/cocktail2.jpg" class="card-img-top" alt="...">
                     </a>
                     <div class="card-body">
                         <h5 class="card-title">Moscow Mule</h5>
@@ -41,7 +41,7 @@ require "settings/init.php";
             </div>
             <div class="col">
                 <div class="card h-100">
-                    <img src="pics/pinacolada.jpg" class="card-img-top h-100" alt="...">
+                    <img src="pics/cocktail1.jpg" class="card-img-top h-100" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Pina Colada</h5>
                     </div>
@@ -49,7 +49,7 @@ require "settings/init.php";
             </div>
             <div class="col">
                 <div class="card h-100">
-                    <img src="pics/sexonthebeach.jpg" class="card-img-top" alt="...">
+                    <img src="pics/cocktail3.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Sex on the beach</h5>
                     </div>

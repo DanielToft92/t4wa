@@ -1,3 +1,7 @@
+<?php
+require "settings/init.php";
+
+?>
 <!DOCTYPE html>
 <html lang="da">
 
@@ -24,12 +28,19 @@
 
 
     <div class="produktbillede">
-        <img src="pics/cocktail2.jpg" class="w-100" style="border-radius: 10px" alt="">
-    </div>
+        <?php
+        $cocktails = $db->sql("SELECT * FROM cocktails WHERE cockId = 8");
+        foreach ($cocktails as $cocktail) {
+            echo '<img src="pics/cocktail' . $cocktail->cockId . '.jpg" class="w-100" alt="' . $cocktail->cockNavn . '">';
+        }
+        ?>    </div>
     <div class="produkttekst">
         <div class="ingredienser">
-
-            <h2>Moscow Mule</h2>
+            <h2>
+                <?php
+                echo $cocktail->cockNavn;
+                ?>
+            </h2>
             <li>2 ting</li>
             <li>3 ting</li>
             <li>4 ting</li>
@@ -39,9 +50,9 @@
         </div>
 
         <div class="tekst">
-            Kom isterninger, limesaft og vodka i en shaker og ryst det godt sammen.
-
-            Hæld i to glas fyldt med knuste isterninger, top med gingerbeer og pynt med lime og mynte
+            <?php
+            echo $cocktail->cockBeskrivelse;
+            ?>
         </div>
         <div class="knapper"></div>
     </div>
@@ -51,9 +62,9 @@
 <script src="app.js"></script>
 
 
-
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
+
 
