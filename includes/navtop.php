@@ -9,10 +9,10 @@
     </a>
     <a href="gin.php" class="category link-light" onclick="addActive(this)">Gin
     </a>
-    <a href="vodka.php" class="category link-light" onclick="addActive(this)">Vodka
+    <a href="error.php" class="category link-light" onclick="addActive(this)">Vodka
     </a>
-    <a href="whisky.php" class="category link-light" onclick="addActive(this)">Whisky
+    <a href="error.php" class="category link-light" onclick="addActive(this)">Whisky
     </a>
-    <a href="andet.php" class="category link-light" onclick="addActive(this)">Andet
+    <a href="error.php" class="category link-light" onclick="addActive(this)">Andet
     </a>
 </div>
