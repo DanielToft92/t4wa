@@ -30,6 +30,7 @@ require "settings/init.php";
     <div>
         <img class="w-100" src="pics/drinksvælger.png" alt="">
     </div>
+
 </div>
     <script src="app.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
