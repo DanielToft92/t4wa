@@ -27,7 +27,7 @@ require "settings/init.php";
     <?php include("includes/navvertical.php") ?>
 
 
-    <div class="indeximg">
+    <div>
         <img class="w-100" src="pics/drinks.webp" alt="">
     </div>
 </div>
