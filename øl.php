@@ -26,12 +26,13 @@ require "settings/init.php";
                border-radius: 5px; border: 1px solid #ccc;"/>
 
 
+
         <div class="row g-2" id="results">
             <?php
             $øl = $db->sql("SELECT * FROM øl");
             foreach ($øl as $øllen) {
                 ?>
-                <div class="col-6 col-md-3 gin-item">
+                <div class="col-6 col-md-3 øl-item">
                     <div class="card h-100">
                         <div class="card-header">
                             <?php echo htmlspecialchars($øllen->ølNavn); ?>
@@ -41,6 +42,9 @@ require "settings/init.php";
                                 <img src="pics/øl/øl<?php echo htmlspecialchars($øllen->ølId); ?>.jpg"
                                      class="card-img-top" alt="<?php echo htmlspecialchars($øllen->ølNavn); ?>">
                             </a>
+                        </div>
+                        <div class="card-footer text-muted">
+                            <?php echo htmlspecialchars($øllen->ølKategori); ?>
                         </div>
                         <div class="card-footer text-muted">
                             <?php echo htmlspecialchars($øllen->ølPris); ?>

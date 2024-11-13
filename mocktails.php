@@ -26,6 +26,7 @@ require "settings/init.php";
                border-radius: 5px; border: 1px solid #ccc;"/>
 
 
+
         <div class="row g-2" id="results">
             <?php
             $mt = $db->sql("SELECT * FROM mocktails");
@@ -55,6 +56,7 @@ require "settings/init.php";
         <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
         <script>
+
             function liveSearch() {
                 const searchTerm = document.getElementById('search').value;
 
