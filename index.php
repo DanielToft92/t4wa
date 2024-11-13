@@ -8,7 +8,7 @@ require "settings/init.php";
 <head>
     <meta charset="utf-8">
 
-    <title>Sigende titel</title>
+    <title>Drinksvælgeren</title>
 
     <meta name="robots" content="All">
     <meta name="author" content="Udgiver">
@@ -28,13 +28,10 @@ require "settings/init.php";
 
 
     <div>
-        <img class="w-100" src="pics/drinks.webp" alt="">
+        <img class="w-100" src="pics/drinksvælger.png" alt="">
     </div>
 </div>
     <script src="app.js"></script>
-
-
-
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
