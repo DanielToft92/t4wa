@@ -41,11 +41,9 @@ require "settings/init.php";
                 echo $cocktail->cockNavn;
                 ?>
             </h2>
-            <li>2 ting</li>
-            <li>3 ting</li>
-            <li>4 ting</li>
-            <li>5 ting</li>
-            <li>6 ting</li>
+            <?php
+            echo $cocktail->cockIngredienser;
+            ?>
 
         </div>
 
