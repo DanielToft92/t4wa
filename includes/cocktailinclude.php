@@ -53,6 +53,10 @@
         <div class="d-flex justify-content-center">
             <h6>Tilføj til Indkøbskurv</h6>
         </div>
+        <div class="d-flex justify-content-center">
+            <a onclick="window.print();" class="knap link-light">Print opskrift
+            </a>
+        </div>
     </div>
 </div>
 
