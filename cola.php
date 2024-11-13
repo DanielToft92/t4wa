@@ -25,7 +25,6 @@ require "settings/init.php";
                 ?>
                 <div class="col-6 col-md-3">
                     <div class="card h-100">
-
                         <div class="card-header">
                             <?php
                             echo $colaen->coNavn;

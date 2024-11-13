@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>Sigende titel</title>
+    <title><?php echo $cocktail->cockNavn?></title>
 
     <meta name="robots" content="All">
     <meta name="author" content="Udgiver">
