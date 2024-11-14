@@ -24,7 +24,7 @@
 
 
     <div class="produktbillede">
-        <img src="pics/moscowmule.jpg" class="w-100" style="border-radius: 10px" alt="">
+        <img src="pics/cocktail2.jpg" class="w-100" style="border-radius: 10px" alt="">
     </div>
     <div class="produkttekst">
         <div class="ingredienser">
