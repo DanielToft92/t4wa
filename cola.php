@@ -18,7 +18,7 @@ require "settings/init.php";
     <?php include("includes/navvertical.php") ?>
     <div class="indholdindhold">
 
-        <div class="row g-2">
+        <div class="row g-2" id="results">
             <?php
             $cola = $db->sql("SELECT * FROM cola");
             foreach ($cola as $colaen) {
@@ -50,10 +50,28 @@ require "settings/init.php";
         </div>
 
     </div>
-    <div></div>
+    <div class="søgefelt">
+        <input type="text" id="search" placeholder="Søg efter navn" oninput="liveSearch()"
+               style="0; padding: 8px; width: 100%; max-width: 200px;
+               border-radius: 5px; border: 1px solid #ccc;"/>
+    </div>
 </div>
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script src="app.js"></script>
+<script>
+    function liveSearch() {
+        const searchTerm = document.getElementById('search').value;
+
+        const xhr = new XMLHttpRequest();
+        xhr.open("GET", "search.php?search=" + encodeURIComponent(searchTerm) + "&table=cola", true);
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                document.getElementById('results').innerHTML = xhr.responseText;
+            }
+        };
+        xhr.send();
+    }
+</script>
 
 </body>
 </html>
