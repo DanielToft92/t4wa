@@ -44,7 +44,7 @@ require "settings/init.php";
         </div>
         <div class="knapper"></div>
     </div>
-    <div class="filtrering"></div>
+    <?php include ("includes/filtrering.php") ?>
 </div>
 
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

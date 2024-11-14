@@ -52,8 +52,12 @@ require "settings/init.php";
             echo $mocktailsne->mtBeskrivelse;
             ?>
         </div>
+    </div>
+    <?php include ("includes/filtrering.php") ?>
+</div>
 
-        <script>
+
+    <script>
             function goBack() {
                 if (window.history.length > 1) {
                     window.history.back();

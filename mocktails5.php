@@ -52,7 +52,9 @@ require "settings/init.php";
             echo $mocktailsne->mtBeskrivelse;
             ?>
         </div>
-
+    </div>
+    <?php include ("includes/filtrering.php") ?>
+</div>
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script src="app.js"></script>
 </body>
